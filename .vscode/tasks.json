@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "compile",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-o",
+        "exes/${fileBasenameNoExtension}", // Output to 'exes' folder
+        "${file}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "compile and run",
+      "type": "shell",
+      "command": "gcc -o \"exes/${fileBasenameNoExtension}\" \"${file}\" && .\\exes\\${fileBasenameNoExtension} < input.txt > output.txt", // Output to 'exes' folder
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
