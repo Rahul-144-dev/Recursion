@@ -8,8 +8,9 @@ void func(int i, int n)
 }
 int main()
 {
-  int n;
-  scanf("%d", &n);
-  func(n, n);
+  // int n;
+  // scanf("%d", &n);
+  // func(n, n);
+  FILE *ptr = fopen("output.txt", "w");
   return 0;
 }
