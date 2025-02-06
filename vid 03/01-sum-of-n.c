@@ -1,15 +1,17 @@
 #include <myfunc.h>
-void func(int i, int n)
+void func(int i, int sum)
 {
   if (i < 1)
+  {
+    printf("%d", sum);
     return;
-  printf("%d\n", i);
-  func(i - 1, n);
+  }
+  func(i - 1, sum + i);
 }
 int main()
 {
   int n;
   scanf("%d", &n);
-  func(n, n);
+  func(n, 0);
   return 0;
 }

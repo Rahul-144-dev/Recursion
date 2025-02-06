@@ -3,8 +3,8 @@ void func(int i, int n)
 {
   if (i < 1)
     return;
-  printf("%d\n", i);
   func(i - 1, n);
+  printf("%d\n", i);
 }
 int main()
 {

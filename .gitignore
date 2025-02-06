@@ -1,5 +1,5 @@
 /exes
 **/*exe
 **/*.vscode
-/intput.txt
+/input.txt
 /output.txt
